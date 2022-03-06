@@ -1,0 +1,46 @@
+.list {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  &:hover .list-row-arrow {
+    opacity: 1;
+  }
+  padding: 0 1.5rem;
+  .list-title {
+    padding-top: 3rem;
+    color: var(--title-color);
+  }
+  .list-row {
+    display: flex;
+    flex-direction: row;
+    padding: 1.25rem 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .list-row-arrow {
+    background: transparent;
+    height: 20vh;
+    display: flex;
+    opacity: 0;
+    font-size: 4rem;
+    position: absolute;
+    top: 1/2;
+    color: white;
+    margin-top: 1.25rem;
+    z-index: 99;
+    transition: all ease 0.5s;
+    align-items: center;
+    cursor: pointer;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+      margin-right: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.featured {
+  background: linear-gradient(to right, #111 20%, transparent 90%),
+    url("https://i0.wp.com/shiftdelete.net/wp-content/uploads/2021/09/adult-swimden-heyecanlandiran-rick-and-morty-paylasimi.jpg?w=1280&ssl=1")
+      no-repeat center/100%;
+  height: 90vh;
+  overflow-y: hidden;
+
+  .featured-info {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 25rem 1rem;
+
+    .title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: var(--title-color);
+    }
+    .desc {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      color: var(--text-color);
+      line-height: 2rem;
+    }
+    .buttons {
+      margin: 1rem 0;
+      display: flex;
+    }
+  }
+  .featureBtnIcon {
+    margin-right: 7px;
+  }
+  .playBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 4px;
+    color: var(--bcg-color);
+    background-color: var(--title-color);
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .infoBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 4px;
+    background-color: var(--text-color);
+    color: var(--title-color);
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  button {
+    padding: 1rem 3.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+}

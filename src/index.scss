@@ -1,0 +1,23 @@
+:root {
+  --main-color: #0b0b0b;
+  --bcg-color: #111;
+  --text-color: #999;
+  --title-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--bcg-color);
+}
+
+.app {
+  background-color: var(--main-color);
+}

@@ -1,0 +1,16 @@
+.list-item {
+  height: 20vh;
+  min-width: 20vw;
+  border: 1px solid gray;
+  cursor: pointer;
+  transition: transform 450ms;
+  transform: scale(1);
+
+  img {
+    object-fit: contain;
+  }
+  &:hover {
+    transform: scale(1.15);
+    z-index: 9;
+  }
+}

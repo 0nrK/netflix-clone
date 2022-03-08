@@ -2,17 +2,24 @@
   width: 100vw;
   position: relative;
   overflow: hidden;
+  padding: 0 3rem;
+  @media only screen and (max-width: 900px) {
+    height: 50vh;
+    .list-row {
+      height: 50vh;
+    }
+  }
   &:hover .list-row-arrow {
     opacity: 1;
   }
-  padding: 0 1.5rem;
   .list-title {
-    padding-top: 3rem;
+    padding-top: 2rem;
     color: var(--title-color);
   }
   .list-row {
     display: flex;
     flex-direction: row;
+    height: 30vh;
     padding: 1.25rem 0;
     overflow-x: scroll;
     scroll-behavior: smooth;

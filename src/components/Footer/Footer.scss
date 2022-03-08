@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  margin: 2rem auto;
+  padding: 1.5rem 0;
+  font-size: 13px;
+  color: #757575;
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-self: center;
+    li {
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    ul {
+      margin: 0;
+    }
+  }
+}

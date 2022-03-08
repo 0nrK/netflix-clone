@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { FiInfo, FiPlay } from "react-icons/fi"
+import { BsPlayFill } from "react-icons/bs"
 import axios from "axios"
 import "./Featured.scss"
 
@@ -33,12 +33,8 @@ const Featured = ({ type, setGenre }) => {
                 <p className="desc">{content.desc}</p>
                 <div className="buttons">
                     <button className="playBtn">
-                        <FiPlay className="featureBtnIcon" />
+                        <BsPlayFill className="playBtn-icon" />
                         <span>Play</span>
-                    </button>
-                    <button className="infoBtn">
-                        <FiInfo className="featureBtnIcon" />
-                        <span>Info</span>
                     </button>
                 </div>
                 <span>Genres: </span>

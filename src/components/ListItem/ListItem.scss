@@ -2,15 +2,17 @@
   height: 20vh;
   min-width: 20vw;
   border: 1px solid gray;
+  background-color: var(--main-color);
+  color: white;
   cursor: pointer;
   transition: transform 450ms;
   transform: scale(1);
-
-  img {
-    object-fit: contain;
-  }
-  &:hover {
-    transform: scale(1.15);
-    z-index: 9;
+  position: relative;
+  margin-right: 1rem;
+  @media only screen and (max-width: 900px) {
+    height: auto;
+    width: 1/5;
+    overflow: hidden;
+    margin-right: 1rem;
   }
 }

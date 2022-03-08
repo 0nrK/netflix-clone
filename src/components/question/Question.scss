@@ -1,0 +1,41 @@
+.answer {
+  opacity: 0;
+  transition: all 0.5 ease;
+  width: 40vw;
+  height: 0;
+  background-color: #303030;
+  padding: 1.5rem;
+  line-height: 2rem;
+  .icon {
+    transition: all;
+    .active {
+      transform: rotate(45deg);
+    }
+  }
+}
+.active {
+  opacity: 1;
+  height: auto;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40vw;
+  background-color: #303030;
+  margin-top: 1rem;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+
+  svg {
+    width: 2rem;
+  }
+}

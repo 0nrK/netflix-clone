@@ -1,5 +1,5 @@
 .navbar {
-  width: 100%;
+  width: 100vw !important;
   position: fixed;
   top: 0;
   z-index: 999999;
@@ -8,6 +8,30 @@
 
   color: white;
   background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw !important;
+  justify-content: space-between !important;
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      width: 100vw !important;
+    }
+    .nav-left {
+      img {
+        height: 3vh !important;
+        margin: 0 !important;
+      }
+    }
+    .nav-right {
+      img {
+        width: 10vw !important;
+        object-fit: contain;
+        height: 5vh !important;
+      }
+    }
+  }
 
   &.scrolled {
     background-color: var(--main-color);
@@ -47,8 +71,11 @@
       .nav-pp {
         width: 3vw;
         height: 5vh;
-        object-fit: cover;
         border-radius: 4px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       .nav-profile {
         display: flex;

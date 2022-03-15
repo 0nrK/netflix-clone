@@ -1,12 +1,10 @@
 .list {
-  width: 100vw;
-  position: relative;
+  width: 100%;
   overflow: hidden;
-  padding: 0 3rem;
+  padding: 0 2rem;
   @media only screen and (max-width: 900px) {
-    height: 50vh;
     .list-row {
-      height: 50vh;
+      height: auto;
     }
   }
   &:hover .list-row-arrow {
@@ -19,8 +17,7 @@
   .list-row {
     display: flex;
     flex-direction: row;
-    height: 30vh;
-    padding: 1.25rem 0;
+    padding: 1.25rem 2rem;
     overflow-x: scroll;
     scroll-behavior: smooth;
     &::-webkit-scrollbar {
@@ -30,7 +27,7 @@
 
   .list-row-arrow {
     background: transparent;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     opacity: 0;
     font-size: 4rem;
@@ -38,7 +35,7 @@
     top: 1/2;
     color: white;
     margin-top: 1.25rem;
-    z-index: 99;
+    z-index: 999;
     transition: all ease 0.5s;
     align-items: center;
     cursor: pointer;

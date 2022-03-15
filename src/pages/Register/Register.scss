@@ -15,6 +15,7 @@
     @media only screen and (max-width: 900px) {
       flex-direction: column;
       width: 100%;
+
       .text {
         width: 100vw !important;
         padding: 3rem;
@@ -26,6 +27,7 @@
     }
     h1 {
       font-size: 3.5rem;
+      line-height: 4rem;
       text-align: center;
       margin-bottom: 1rem;
     }
@@ -33,9 +35,11 @@
       font-size: 1.2rem;
     }
     img {
+      width: 100%;
       object-fit: contain;
     }
     .text {
+      text-align: center;
       margin: 0 3rem;
       width: 30%;
       margin-top: 1rem;
@@ -57,7 +61,7 @@
       margin-bottom: 2rem;
       h1 {
         padding: 1rem;
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
         text-align: center;
       }
       .question {
@@ -112,7 +116,7 @@
     }
   }
   .banner {
-    height: 80vh;
+    min-height: 80vh;
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
@@ -122,29 +126,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     overflow: hidden;
-    .form {
+
+    .register-banner {
       display: flex;
+      margin-top: 2rem;
       flex-direction: column;
       color: white;
       text-align: center;
+
       width: 50vw;
-      margin-top: 4rem;
-      @media only screen and (max-width: 900px) {
+      @media only screen and (max-width: 1300px) {
         width: 100%;
+        margin-top: 2rem;
+        padding: 1rem;
+
+        .form {
+          input {
+            width: 100%;
+          }
+          button {
+            width: 100%;
+            margin: 1rem 0;
+          }
+        }
         h1 {
-          font-size: 2.5rem !important;
+          font-size: 2rem !important;
+          line-height: 1rem !important;
         }
         h3 {
-          font-size: 1.5rem !important;
+          font-size: 1.2rem !important;
+          line-height: 1rem !important;
+        }
+        p {
+          font-size: 1.1rem !important;
         }
       }
       h1 {
         font-size: 4.5rem;
+        line-height: 5rem !important;
+
         font-weight: bold;
       }
       h3 {
         font-size: 2rem;
+        line-height: 3rem !important;
+
         margin: 1rem;
       }
       p {
@@ -167,6 +195,7 @@
   }
   hr {
     width: 100%;
+
     border: 4px solid #222;
   }
   .nav {

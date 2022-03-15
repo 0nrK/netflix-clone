@@ -1,41 +1,65 @@
 .featured {
-  background: linear-gradient(to right, #111 20%, transparent 90%),
+  background: linear-gradient(to top, #111 5%, transparent 50%),
     url("https://i0.wp.com/shiftdelete.net/wp-content/uploads/2021/09/adult-swimden-heyecanlandiran-rick-and-morty-paylasimi.jpg?w=1280&ssl=1")
       no-repeat center/100%;
-  height: 90vh;
-  overflow-y: hidden;
-  padding: 1rem;
+  min-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-size: cover;
   @media only screen and (max-width: 1250px) {
-    background: linear-gradient(to top, #111 20%, transparent 90%),
-      url("https://i0.wp.com/shiftdelete.net/wp-content/uploads/2021/09/adult-swimden-heyecanlandiran-rick-and-morty-paylasimi.jpg?w=1280&ssl=1")
-        no-repeat center/100%;
-    width: 100vw;
-    height: 100%;
+    height: 100vh;
+
+    width: 100vw !important;
     .featured-info {
-      margin: 0 !important;
-      text-align: center;
-      flex-direction: row;
       width: 100vw !important;
+      margin: 0 !important;
+      justify-content: flex-end;
+
       .title {
         font-size: 2rem !important;
-        margin-top: 10rem;
       }
+
       .desc {
-        width: 100%;
-        margin: 0;
-        font-size: 0.8rem !important;
-      }
-      .playBtn {
-        padding: 0.4rem 0.7rem;
-        margin: 0 auto;
+        width: 100% !important;
+        font-size: 1rem !important;
+        color: var(--text-color);
+        line-height: 1.5rem;
+        margin-bottom: 10rem;
       }
     }
   }
+
   .featured-info {
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    height: 100%;
     width: 40vw;
-    margin: 25rem 2rem;
+    .playBtn-icon {
+      font-size: 2rem;
+    }
+    .playBtn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-right: 4px;
+      color: var(--bcg-color);
+      background-color: var(--title-color);
+      transition: all 0.3s ease-in-out;
+      border: none;
+      font-size: 1.2rem;
+      width: 7.5rem;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      &:hover {
+        background: red;
+        color: white;
+      }
+    }
 
     .title {
       font-size: 4rem;
@@ -45,44 +69,8 @@
     .desc {
       font-size: 1.5rem;
       margin: 1rem 0;
-      color: var(--text-color);
+      color: white;
       line-height: 2rem;
     }
-    .buttons {
-      margin: 1rem 0;
-      display: flex;
-    }
-  }
-  .playBtn-icon {
-    font-size: 2rem;
-  }
-  .playBtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 4px;
-    color: var(--bcg-color);
-    background-color: var(--title-color);
-    &:hover {
-      opacity: 0.9;
-    }
-  }
-  .infoBtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 4px;
-    background-color: var(--text-color);
-    color: var(--title-color);
-    &:hover {
-      opacity: 0.9;
-    }
-  }
-  button {
-    padding: 1rem 3.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
   }
 }

@@ -5,11 +5,14 @@
   --title-color: #fff;
 }
 
+body {
+  overflow-x: hidden;
+  line-height: 2rem;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .body {

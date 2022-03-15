@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
+import { FaqItem } from '../../components/FaqItem/FaqItem'
 import Footer from '../../components/Footer/Footer'
 import "./Register.scss"
 const Register = () => {
-    const [isAnswerActive, setIsAnswerActive] = useState(false)
     const ansRef = useRef(null)
 
     const faqData = [
@@ -52,12 +52,12 @@ const Register = () => {
                         alt="" />
                     <button className="sign-in">Sign In</button>
                 </div>
-                <div className="form">
+                <div className="register-banner">
                     <h1>Unlimited movies, TV shows, and more.</h1>
                     <h3>Watch anywhere. Cancel anytime.</h3>
                     <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                    <div>
-                        <input type="email" />
+                    <div className="form">
+                        <input placeholder="Enter your e-mail" type="email" />
                         <button>GET STARTED  </button>
                     </div>
                 </div>
@@ -97,17 +97,7 @@ const Register = () => {
 
                 {faqData.map((que) => {
                     return (
-                        <div key={que.id} ref={ansRef}>
-                            <div className="question" onClick={() => setIsAnswerActive(!isAnswerActive)}>
-                                <span>{que.question}</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className={isAnswerActive ? "icon active" : "icon"} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-                                </svg>
-                            </div>
-                            <span draggable={true} className={isAnswerActive ? "answer active" : "answer"}>
-                                {que.answer}
-                            </span>
-                        </div>
+                        <FaqItem key={que.id} props={que} />
                     )
                 })}
 

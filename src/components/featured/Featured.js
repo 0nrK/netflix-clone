@@ -31,12 +31,10 @@ const Featured = ({ type, setGenre }) => {
             <div className="featured-info">
                 <h1 className="title">{content.title}</h1>
                 <p className="desc">{content.desc}</p>
-                <div className="buttons">
-                    <button className="playBtn">
-                        <BsPlayFill className="playBtn-icon" />
-                        <span>Play</span>
-                    </button>
-                </div>
+                <button className="playBtn">
+                    <BsPlayFill className="playBtn-icon" />
+                    <span>Play</span>
+                </button>
                 <span>Genres: </span>
             </div>
         </div >

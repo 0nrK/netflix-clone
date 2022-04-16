@@ -11,7 +11,6 @@ const Home = ({ type }) => {
     const [data, setData] = useState(movies)
 
     const [genres, setGenres] = useState(["Netflix Originals", "Action", "Documentary"])
-    console.log(data);
 
     return (
         <div className="home">

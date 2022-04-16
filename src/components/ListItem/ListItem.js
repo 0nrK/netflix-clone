@@ -11,7 +11,6 @@ const ListItem = ({ props }) => {
         if (props.title === "Netflix Originals") {
             setIsLargeRow(true)
         }
-        console.log(isLargeRow)
     }, [props])
 
 

@@ -13,8 +13,7 @@ import { AuthContext } from "./authContext/AuthContext";
 
 
 const App = () => {
-  const { user } = useContext(AuthContext)
-  console.log(user);
+
   return (
     <div>
       <BrowserRouter>

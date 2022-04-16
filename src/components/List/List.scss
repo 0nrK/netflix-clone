@@ -2,10 +2,9 @@
   width: 100%;
   overflow: hidden;
   padding: 0 2rem;
+  height: auto;
+
   @media only screen and (max-width: 900px) {
-    .list-row {
-      height: auto;
-    }
   }
   &:hover .list-row-arrow {
     opacity: 1;
@@ -19,6 +18,9 @@
     flex-direction: row;
     padding: 1.25rem 2rem;
     overflow-x: scroll;
+    overflow-y: hidden;
+    height: fit-content;
+
     scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
@@ -27,12 +29,12 @@
 
   .list-row-arrow {
     background: transparent;
-    height: 25vh;
+    height: 17vh;
     display: flex;
     opacity: 0;
     font-size: 4rem;
     position: absolute;
-    top: 1/2;
+    align-items: center;
     color: white;
     margin-top: 1.25rem;
     z-index: 999;

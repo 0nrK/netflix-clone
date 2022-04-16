@@ -3,9 +3,9 @@ import "./Footer.scss"
 const Footer = () => {
     return (
         <div className="footer">
-            <div>
+            <div className="wrapper">
 
-                <ul>
+                <ul className="list">
                     <li>
                         <span>
                             FAQ
@@ -27,7 +27,7 @@ const Footer = () => {
                         </span>
                     </li>
                 </ul>
-                <ul>
+                <ul className="list">
 
                     <li>
                         <span>
@@ -51,9 +51,9 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <div>
+            <div className="wrapper">
 
-                <ul>
+                <ul className="list">
                     <li>
                         <span>
                             Terms of Use
@@ -75,7 +75,7 @@ const Footer = () => {
                         </span>
                     </li>
                 </ul>
-                <ul>
+                <ul className="list">
                     <li>
                         <span>
                             Contact Us

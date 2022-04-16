@@ -2,33 +2,21 @@
   background-color: var(--main-color);
   color: white;
   cursor: pointer;
-  height: 25vh;
+  height: auto ;
   transition: transform 500ms;
   margin-right: 1rem;
   z-index: 99;
   overflow: hidden;
-  .active {
-    position: fixed !important;
-    left: 0;
-    .list-row {
-      overflow: hidden !important;
-    }
-  }
+  
+  
 
   .image {
-    height: 25vh;
-    width: 22.5vw;
     object-fit: cover;
-
     &:hover {
       opacity: 0.8;
     }
   }
-  .large {
-    height: 25vh;
-    width: auto;
-    object-fit: contain;
-  }
+ 
 
   &:hover {
     z-index: 9;
@@ -37,11 +25,14 @@
 }
 
 .list-item-container {
-  height: 100%;
-  width: 100%;
+
+  height: fit-content;
+
+
   @media only screen and (max-width: 900px) {
     .image {
-      object-fit: contain;
+      object-fit: cover;
+      min-width: 10rem;
       img {
         width: 100%;
         height: 100%;

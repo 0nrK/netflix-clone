@@ -55,6 +55,13 @@
     padding: 0.8rem 1rem;
     font-size: 1.5rem;
     color: white;
+    .icon {
+      transition: all;
+      .active {
+        transform: rotate(45deg);
+        color: yellow;
+      }
+    }
     @media only screen and (max-width: 900px) {
       padding: 0;
       margin: 0;

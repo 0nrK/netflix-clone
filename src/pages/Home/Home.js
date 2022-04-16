@@ -4,37 +4,24 @@ import Navbar from '../../components/Navbar/Navbar'
 import axios from "axios"
 import "./Home.scss"
 import List from '../../components/List/List'
+import { movies } from "../../data.js"
 const Home = ({ type }) => {
 
-    const [lists, setLists] = useState([]);
-    const [genre, setGenre] = useState(null);
 
+    const [data, setData] = useState(movies)
 
-    useEffect(() => {
-        const getRandomLists = async () => {
-            try {
-                await axios.get(`lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`,
-                    {
-                        headers: {
-                            token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken
-                        }
-                    }).then((res) => console.log(res)/* setLists(res.data) */)
-
-            } catch (err) {
-                console.log(err);
-            }
-        }
-        getRandomLists()
-    }, [type, genre])
+    const [genres, setGenres] = useState(["Netflix Originals", "Action", "Documentary"])
+    console.log(data);
 
     return (
         <div className="home">
             <Navbar />
-            <Featured type={type} setGenre={setGenre} />
-            <List />
-            <List />
-            <List />
-            <List />
+            <Featured />
+
+            {genres.map((genre) => { return <List genre={genre} data={data} /> })}
+
+
+
 
         </div>
     )
